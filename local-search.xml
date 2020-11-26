@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>如何使用hexo创建一篇新的博客</title>
+    <link href="/2020/11/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
+    <url>/2020/11/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
+    
+    <content type="html"><![CDATA[<ol><li>hexo new 「title」</li><li>复制显示的路径，使用 open 来进行编辑</li><li>hexo generate</li><li>Hero deploy</li><li>撒花🎉🎉🎉🎉🎉</li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>第二篇博客</title>
     <link href="/2020/11/26/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/"/>
     <url>/2020/11/26/%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
