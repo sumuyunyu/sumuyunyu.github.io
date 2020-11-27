@@ -4,6 +4,35 @@
   
   
   <entry>
+    <title>网页响应状态码</title>
+    <link href="/2020/11/27/%E7%BD%91%E9%A1%B5%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/"/>
+    <url>/2020/11/27/%E7%BD%91%E9%A1%B5%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/</url>
+    
+    <content type="html"><![CDATA[<ul><li>1xx 不常用</li><li>2xx 表示成功</li><li>3xx 表示滚吧<ul><li>301 永久的不在了</li><li>302 临时的搬走了</li><li>304 这一次和上一次的内容一样</li></ul></li><li>4xx 你错了</li><li>5xx 我错了</li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>前端开发</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>http</tag>
+      
+      <tag>状态码</tag>
+      
+      <tag>网站</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>如何使用hexo创建一篇新的博客</title>
     <link href="/2020/11/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/"/>
     <url>/2020/11/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/</url>
