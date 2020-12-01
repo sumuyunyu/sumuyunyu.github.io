@@ -17,9 +17,25 @@
   <meta name="description" content="">
   <meta name="author" content="JXY">
   <meta name="keywords" content="">
-  <title>分类 - 静谧空间</title>
+  <title>如何将个人域名与github.io博客绑定 - 静谧空间</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.1.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+  
 
 
 
@@ -47,7 +63,7 @@
 
 
 <body>
-  <header style="height: 60vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -141,14 +157,51 @@
 </nav>
 
     <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/wall.jpg') no-repeat center center;
+         style="background: url('/img/banner_1.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="分类">
+            <span class="h2" id="subtitle" title="如何将个人域名与github.io博客绑定">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2020-12-01 10:04" pubdate>
+        2020年12月1日 上午
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      348 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      4
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -161,119 +214,117 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">如何将个人域名与github.io博客绑定</h1>
+            
+            <div class="markdown-body">
+              <ol>
+<li><p>首先到<a target="_blank" rel="noopener" href="https://www.namesilo.com/">NameSilo</a> 购买域名，可以使用支付宝，相对比较便宜,（后面假设你买的域名叫yoursite.com）</p>
+<p><img src="%E5%A6%82%E4%BD%95%E5%B0%86%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D%E4%B8%8Egithub-io%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A.assets/image-20201201120911933-6795879.png" srcset="/img/loading.gif" alt="image-20201201120911933"></p>
+</li>
+<li><p>到你的github博客仓库下（username.github.io）,点击Settings,还不知道如何搭建博客的，建议搜索hexo+github，我也可能会出一个教程<img src="../../public/img/image-20201201121519275.png" srcset="/img/loading.gif" alt="image-20201201121519275"></p>
+<p>在GitHub Pages下有个Custom domain，写下你的域名（如 yoursite.com），注意不需要写www、http，域名就行，然后点击Save</p>
+</li>
+</ol>
+<p><img src="../../public/img/image-20201201121948167.png" srcset="/img/loading.gif" alt="image-20201201121948167"></p>
+<ol start="3">
+<li>使用<a target="_blank" rel="noopener" href="https://www.dnspod.cn/">Dnspod</a> 免费进行域名解析，先注册一下，首页下面会有一个DNS域名解析（域名解析需要实名登记，整一下就行）<img src="../../public/img/image-20201201122413723.png" srcset="/img/loading.gif" alt="image-20201201122413723"></li>
+</ol>
+<p>进入控制台，有一个添加域名，把你要绑的域名填上</p>
+<p><img src="../../public/img/image-20201201122552755-6796793.png" srcset="/img/loading.gif" alt="image-20201201122552755"></p>
+<p>添加后提示DNS错误，如下，没关系</p>
+<p><img src="../../public/img/image-error.png" srcset="/img/loading.gif" alt="屏幕快照 2020-12-01 下午12.37.38"></p>
+<p>到域名注册的地方，也就是<a target="_blank" rel="noopener" href="https://www.namesilo.com/account_home.php">Namesilo</a> 那里点击Manage My Domains </p>
+<p><img src="../../public/img/image-20201201124241196.png" srcset="/img/loading.gif" alt="image-20201201124241196"></p>
+<p>点击你的域名，进入Domain Console，点击Change修改DNS服务器，把刚才DNS错误提示中的两个网址填进去，默认的网址去掉就行</p>
+<p><img src="../../public/img/image-20201201124759108.png" srcset="/img/loading.gif" alt="image-20201201124759108"></p>
+<p>然后回到Dnspod，点击已经添加好的这个域名，进行添加记录，注意185.199.108.153是ping username.github.io 得到的，把username换成你的github用户名。</p>
+<p><img src="%E5%A6%82%E4%BD%95%E5%B0%86%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D%E4%B8%8Egithub-io%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A.assets/image-20201201122849966-6796963.png" srcset="/img/loading.gif" alt="image-20201201122849966"></p>
+<pre><code class="hljs dns">@ <span class="hljs-keyword">A</span> <span class="hljs-number">185.199.108.153</span>
+@ <span class="hljs-keyword">A</span> <span class="hljs-number">185.199.109.153</span>
+www <span class="hljs-keyword">CNAME</span> username.github.io</code></pre>
 
+<p>如下</p>
+<p><img src="../../public/img/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202020-12-01%20%E4%B8%8B%E5%8D%8812.53.07.png" srcset="/img/loading.gif" alt="屏幕快照 2020-12-01 下午12.53.07"></p>
+<ol start="4">
+<li>好了，大功告成，耐心等待，域名在网络上解析还需要一定的时间，不出半天就能稳定访问了🎉🎉🎉</li>
+</ol>
 
-
-
-
-
-<div class="category-list">
-  
-  
-  
-  
-    
-    
-    <div class="category row">
-      <a
-        class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-cki06592n0001sts6hs59ehsl" role="tab" data-toggle="collapse" href="#collapse-cki06592n0001sts6hs59ehsl"
-        aria-expanded="false"
-      >
-        前端开发
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      <a href="/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/" class="category-count col-2 col-md-1">
-        <i class="iconfont icon-articles"></i>
-        <span>2</span>
-      </a>
-      <div class="category-collapse">
-        
-          
-  <div id="collapse-cki06592n0001sts6hs59ehsl" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-cki06592n0001sts6hs59ehsl">
-    
-    
-    
-      
-      
-        <a href="/2020/11/27/CSS%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/" class="list-group-item list-group-item-action">
-          <span class="category-post">CSS网站推荐</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2020/11/27/%E7%BD%91%E9%A1%B5%E5%93%8D%E5%BA%94%E7%8A%B6%E6%80%81%E7%A0%81/" class="list-group-item list-group-item-action">
-          <span class="category-post">网页响应状态码</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-    
-    
-    <div class="category row">
-      <a
-        class="category-item collapsed list-group-item category-item-action col-10 col-md-11"
-        id="heading-cki5ik32w00011ufyat224z8d" role="tab" data-toggle="collapse" href="#collapse-cki5ik32w00011ufyat224z8d"
-        aria-expanded="false"
-      >
-        Hexo博客搭建
-        <i class="iconfont icon-arrowright"></i>
-      </a>
-      <a href="/categories/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="category-count col-2 col-md-1">
-        <i class="iconfont icon-articles"></i>
-        <span>2</span>
-      </a>
-      <div class="category-collapse">
-        
-          
-  <div id="collapse-cki5ik32w00011ufyat224z8d" class="collapse in" role="tabpanel"
-       aria-labelledby="heading-cki5ik32w00011ufyat224z8d">
-    
-    
-    
-      
-      
-        <a href="/2020/12/01/%E5%A6%82%E4%BD%95%E5%B0%86%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D%E4%B8%8Egithub-io%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A/" class="list-group-item list-group-item-action">
-          <span class="category-post">如何将个人域名与github.io博客绑定</span>
-        </a>
-      
-    
-      
-      
-        <a href="/2020/11/26/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E5%88%9B%E5%BB%BA%E4%B8%80%E7%AF%87%E6%96%B0%E7%9A%84%E5%8D%9A%E5%AE%A2/" class="list-group-item list-group-item-action">
-          <span class="category-post">如何使用hexo创建一篇新的博客</span>
-        </a>
-      
-    
-  </div>
-
-        
-      </div>
-    </div>
-  
-</div>
-
-              </div>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/Hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">Hexo博客搭建</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/hexo/">hexo</a>
+                    
+                      <a class="hover-with-bg" href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/11/27/CSS%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/">
+                        <span class="hidden-mobile">CSS网站推荐</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -356,9 +407,15 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.12.0/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.3.0/anchor.min.js" ></script>
 
 
 
