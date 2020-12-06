@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      208 字
+      306 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      2
+      3
        分钟
     </span>
   
@@ -228,7 +228,8 @@
             
             <div class="markdown-body">
               <p>null与undefined都表示 “没有” ，而且如果在if中，都转为false。</p>
-<p>区别在，null是一个定义为空值，而undefined表示不存在的值</p>
+<p>区别在，null是一个值定义了，为一个“空值”，而undefined表示根本不存在定义</p>
+<p>历史原因：为什么别的语言只有一个null就可以了，而JavaScript有两个这样类似的东西呢，因为最初没有错误处理机制，null加上一个数值，类型不匹配会自动转换或者默默失败，创始人觉得不行，因为null转换为0 不容易发现，所以搞了个undefined。</p>
 <p><strong>null是一个表示”无”的对象，转为数值时为0；undefined是一个表示”无”的原始值，转为数值时为NaN。</strong><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html
 ">[1]</span></a></sup></p>
 <p>undefined转换为数值为NaN（not a number），null转为数值为0</p>
