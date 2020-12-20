@@ -234,16 +234,16 @@
 <p>两者差别在于是否经过数据库。</p>
 <p>漏洞攻击本身是，黑客希望用户能够执行黑客所给的恶意代码，一旦浏览器解析的黑客的恶意代码，黑客的阴谋就得逞了。</p>
 <p>并不是只有script才可以插入代码如<code>&lt;img&gt;、&lt;div on mouseover = &#39;heiheihei&#39;&gt;</code>等</p>
-<h3 id="反射性XSS"><a href="#反射性XSS" class="headerlink" title="反射性XSS"></a>反射性XSS</h3><p>反射性XSS，也就是非持久性XSS。用户点击攻击链接，服务器解析后响应，在返回的响应内容中出现攻击者的XSS代码，被浏览器执行。一来一去，<strong>XSS攻击脚本被web server反射回来给浏览器执行</strong>，所以称为反射型XSS。</p>
+<h3 id="反射性XSS（非持久型）"><a href="#反射性XSS（非持久型）" class="headerlink" title="反射性XSS（非持久型）"></a>反射性XSS（非持久型）</h3><p>反射性XSS，也就是非持久性XSS。用户点击攻击链接，服务器解析后响应，在返回的响应内容中出现攻击者的XSS代码，被浏览器执行。一来一去，<strong>XSS攻击脚本被web server反射回来给浏览器执行</strong>，所以称为反射型XSS。</p>
 <p>这个视图函数接收用户通过查询字符串（URL后边的参数）传入的数据，未做任何处理就把它直接插入到返回的响应主题中，返回给客户端。如果某个用户输入了一段JavaScript代码作为查询参数name的值（例如临时对话，黑客向你发送一些链接，或者一些恶意的弹窗、按钮等）</p>
-<p>特点：</p>
+<p><strong>特点</strong>：</p>
 <ol>
 <li>XSS攻击代码非持久性，也就是没有保存在web server中，而是出现在URL地址中</li>
 <li>非持久性，那么攻击方式就不同了。一般是攻击者通过邮件，聊天软件等等方式发送攻击URL，然后用户点击来达到攻击的</li>
 </ol>
 <h3 id="存储型XSS（持久型）"><a href="#存储型XSS（持久型）" class="headerlink" title="存储型XSS（持久型）"></a>存储型XSS（持久型）</h3><p>存储型XSS也被称为持久型XSS（persistent XSS）,这种类型的XSS攻击更常见，危害也更大。它和反射型XSS类似，但会把攻击代码存储到数据库中，任何用户访问包含攻击代码的页面都会被殃及。（例如一些论坛、空间的评论框）</p>
 <p>区别就是XSS恶意代码<strong>存储在web server中</strong>，这样，每一个访问特定网页的用户，都会被攻击。</p>
-<p>特点：</p>
+<p><strong>特点</strong>：</p>
 <ol>
 <li><p>XSS攻击代码存储于web server上</p>
 </li>
@@ -265,7 +265,7 @@
 </li>
 </ul>
 <ul>
-<li><p>httponly</p>
+<li><p>HttpOnly</p>
 <p>HttpOnly最早由微软提出，并在IE6 中实现，至今已经逐渐成为一个标准，各大浏览器都支持此标准。具体含义就是，如果某个Cookie带有HttpOnly属性，那么这一条Cookie将被禁止读取，也就是说，JavaScript读取不到此条Cookie，不过在用户与服务端交互的时候，HttpRequest包中仍然会带上这个Cookie信息，即用户与服务端的正常交互不受影响</p>
 </li>
 </ul>
