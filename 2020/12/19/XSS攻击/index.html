@@ -17,7 +17,7 @@
   <meta name="description" content="">
   <meta name="author" content="JXY">
   <meta name="keywords" content="">
-  <title>null与undefined的区别 - 静谧空间</title>
+  <title>XSS攻击 - 静谧空间</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
 
@@ -162,7 +162,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="null与undefined的区别">
+            <span class="h2" id="subtitle" title="XSS攻击">
               
             </span>
 
@@ -172,8 +172,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-12-05 17:36" pubdate>
-        2020年12月5日 下午
+      <time datetime="2020-12-19 23:11" pubdate>
+        2020年12月19日 晚上
       </time>
     </span>
   
@@ -184,7 +184,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      306 字
+      925 字
     </span>
   
 
@@ -194,7 +194,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      3
+      10
        分钟
     </span>
   
@@ -224,49 +224,49 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">null与undefined的区别</h1>
+            <h1 style="display: none">XSS攻击</h1>
             
             <div class="markdown-body">
-              <p>null与undefined都表示 “没有” ，而且如果在if中，都转为false。</p>
-<p>区别在，null是一个值定义了，为一个“空值”，而undefined表示根本不存在定义</p>
-<p>历史原因：为什么别的语言只有一个null就可以了，而JavaScript有两个这样类似的东西呢，因为最初没有错误处理机制，null加上一个数值，类型不匹配会自动转换或者默默失败，创始人觉得不行，因为null转换为0 不容易发现，所以搞了个undefined。</p>
-<p><strong>null是一个表示”无”的对象，转为数值时为0；undefined是一个表示”无”的原始值，转为数值时为NaN。</strong><sup id="fnref:1" class="footnote-ref"><a href="#fn:1" rel="footnote"><span class="hint--top hint--rounded" aria-label="http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html
-">[1]</span></a></sup></p>
-<p>undefined转换为数值为NaN（not a number），null转为数值为0</p>
-<pre><code class="hljs javascript">
-<span class="hljs-built_in">Number</span>(<span class="hljs-literal">undefined</span>)
-<span class="hljs-comment">// NaN</span>
-
-<span class="hljs-number">5</span> + <span class="hljs-literal">undefined</span>
-<span class="hljs-comment">// NaN</span>
-</code></pre>
-
-
-
-<p>undefined典型用法：</p>
-<ol>
-<li>变量被声明了，但没有赋值时，就等于undefined。</li>
-<li>调用函数时，应该提供的参数没有提供，该参数等于undefined。</li>
-<li>对象没有赋值的属性，该属性的值为undefined。</li>
-<li>函数没有返回值时，默认返回undefined。</li>
-</ol>
-<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> i;
-i <span class="hljs-comment">// undefined</span>
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">x</span>)</span>&#123;<span class="hljs-built_in">console</span>.log(x)&#125;
-f() <span class="hljs-comment">// undefined</span>
-
-<span class="hljs-keyword">var</span>  o = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
-o.p <span class="hljs-comment">// undefined</span>
-
-<span class="hljs-keyword">var</span> x = f();
-x <span class="hljs-comment">// undefined</span>
-</code></pre>
-
-
-
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html">http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html</a>
-<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
+              <h5 id="常见的主要有两类"><a href="#常见的主要有两类" class="headerlink" title="常见的主要有两类"></a>常见的主要有两类</h5><ul>
+<li>存储型（持久）</li>
+<li>反射型（非持久）</li>
+</ul>
+<p>两者差别在于是否经过数据库。</p>
+<p>漏洞攻击本身是，黑客希望用户能够执行黑客所给的恶意代码，一旦浏览器解析的黑客的恶意代码，黑客的阴谋就得逞了。</p>
+<p>并不是只有script才可以插入代码如<img>、<div on mouseover = 'heiheihei'>等</p>
+<h5 id="反射性XSS"><a href="#反射性XSS" class="headerlink" title="反射性XSS"></a>反射性XSS</h5><p>反射性XSS，也就是非持久性XSS。用户点击攻击链接，服务器解析后响应，在返回的响应内容中出现攻击者的XSS代码，被浏览器执行。一来一去，<strong>XSS攻击脚本被web server反射回来给浏览器执行</strong>，所以称为反射型XSS。</p>
+<p>这个视图函数接收用户通过查询字符串（URL后边的参数）传入的数据，未做任何处理就把它直接插入到返回的响应主题中，返回给客户端。如果某个用户输入了一段JavaScript代码作为查询参数name的值（例如临时对话，黑客向你发送一些链接，或者一些恶意的弹窗、按钮等）</p>
+<p>特点：</p>
+<p>1&gt; XSS攻击代码非持久性，也就是没有保存在web server中，而是出现在URL地址中；</p>
+<h5 id="存储型XSS（持久型）"><a href="#存储型XSS（持久型）" class="headerlink" title="存储型XSS（持久型）"></a>存储型XSS（持久型）</h5><p>存储型XSS也被称为持久型XSS（persistent XSS），这种类型的XSS攻击更常见，危害也更大。它和反射型XSS类似，但会把攻击代码存储到数据库中，任何用户访问包含攻击代码的页面都会被殃及。（例如一些论坛、空间的评论框）</p>
+<h5 id="攻击结果"><a href="#攻击结果" class="headerlink" title="攻击结果"></a>攻击结果</h5><p>在scrpt标签中，写好黑客服务器，和要发送的用户cookie，那么用户的cookie 就到了黑客手中，之后结果可想而知（可模拟用户登录，修改重要信息）。</p>
+<ul>
+<li>劫持访问</li>
+</ul>
+<p>劫持访问就是在恶意脚本中插入诸如的代码，那么页面就会跳转到百度首页。</p>
+<p>劫持访问在持久型和非持久型XSS中都比较常被利用。持久型XSS中劫持访问的危害不用说大家都清楚，但有人会问非持久型XSS中劫持访问有什么作用呢？</p>
+<p>很简单，试想下像<a href="https://link.zhihu.com/?target=http://qq.com">http://qq.com</a>，<a href="https://link.zhihu.com/?target=http://baidu.com">http://baidu.com</a>这样的域名下出现非持久型XSS，那么在发送钓鱼链接时就可以通过<a href="https://link.zhihu.com/?target=http://qq.com">http://qq.com</a>等域名进行跳转，一般人一看到<a href="https://link.zhihu.com/?target=http://qq.com">http://qq.com</a>之类的域名警惕性会下降，也就更容易上当了。</p>
+<h5 id="防范措施"><a href="#防范措施" class="headerlink" title="防范措施"></a>防范措施</h5><ul>
+<li><p>HTML转义</p>
+<p>防范XSS攻击最主要的方法是对用户输入的内容进行HTML转义，转义后可以确保用户输入的内容在浏览器中作为文本显示，而不是作为代码解析。</p>
+</li>
+</ul>
+<ul>
+<li><p>白名单过滤</p>
+<p>html标签过滤，对诸如<script>、<img>、<a>等标签进行过滤，控制允许的标签及相关的标签属性</p>
+</li>
+</ul>
+<ul>
+<li><p>httponly</p>
+<p>HttpOnly最早由微软提出，并在IE6 中实现，至今已经逐渐成为一个标准，各大浏览器都支持此标准。具体含义就是，如果某个Cookie带有HttpOnly属性，那么这一条Cookie将被禁止读取，也就是说，JavaScript读取不到此条Cookie，不过在用户与服务端交互的时候，HttpRequest包中仍然会带上这个Cookie信息，即用户与服务端的正常交互不受影响</p>
+</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiaxiaoxu/p/10424782.html">https://www.cnblogs.com/xiaxiaoxu/p/10424782.html</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:2" class="footnote-text"><span>(浅谈XSS攻击的那些事（附常用绕过姿势） - Snake的文章 - 知乎)[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26177815]">https://zhuanlan.zhihu.com/p/26177815]</a>
+<a href="#fnref:2" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:3" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://blog.csdn.net/hxpjava1/article/details/81005195">https://blog.csdn.net/hxpjava1/article/details/81005195</a>
+<a href="#fnref:3" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:4" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/waw/p/8399035.html">https://www.cnblogs.com/waw/p/8399035.html</a>
+<a href="#fnref:4" rev="footnote" class="footnote-backref"> ↩</a></span></span></li><li><span id="fn:5" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://www.cnblogs.com/Cl0ud/p/13190413.html">https://www.cnblogs.com/Cl0ud/p/13190413.html</a>
+<a href="#fnref:5" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
             <hr>
             <div>
@@ -285,6 +285,8 @@ x <span class="hljs-comment">// undefined</span>
                     
                       <a class="hover-with-bg" href="/tags/JavaScript/">JavaScript</a>
                     
+                      <a class="hover-with-bg" href="/tags/%E5%AE%89%E5%85%A8/">安全</a>
+                    
                   </div>
                 
               </div>
@@ -296,18 +298,12 @@ x <span class="hljs-comment">// undefined</span>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2020/12/19/XSS%E6%94%BB%E5%87%BB/">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">XSS攻击</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2020/12/01/%E5%A6%82%E4%BD%95%E5%B0%86%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D%E4%B8%8Egithub-io%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A/">
-                        <span class="hidden-mobile">如何将个人域名与github.io博客绑定</span>
+                      <a href="/2020/12/05/null%E4%B8%8Eundefined%E7%9A%84%E5%8C%BA%E5%88%AB/">
+                        <span class="hidden-mobile">null与undefined的区别</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
