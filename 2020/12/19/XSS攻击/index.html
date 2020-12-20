@@ -253,7 +253,7 @@
 <h4 id="攻击结果"><a href="#攻击结果" class="headerlink" title="攻击结果"></a>攻击结果</h4><p>在scrpt标签中，写好黑客服务器，和要发送的用户cookie，那么用户的cookie 就到了黑客手中，之后结果可想而知（可模拟用户登录，修改重要信息）。</p>
 <p><strong>劫持访问</strong>就是在恶意脚本中插入诸如的代码，那么页面就会跳转到百度首页。</p>
 <p>劫持访问在持久型和非持久型XSS中都比较常被利用。持久型XSS中劫持访问的危害不用说大家都清楚，但有人会问非持久型XSS中劫持访问有什么作用呢？</p>
-<p>很简单，试想下像<a target="_blank" rel="noopener" href="http://qq.com,http//baidu.com%E8%BF%99%E6%A0%B7%E7%9A%84%E5%9F%9F%E5%90%8D%E4%B8%8B%E5%87%BA%E7%8E%B0%E9%9D%9E%E6%8C%81%E4%B9%85%E5%9E%8BXSS%EF%BC%8C%E9%82%A3%E4%B9%88%E5%9C%A8%E5%8F%91%E9%80%81%E9%92%93%E9%B1%BC%E9%93%BE%E6%8E%A5%E6%97%B6%E5%B0%B1%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87http://qq.com%E7%AD%89%E5%9F%9F%E5%90%8D%E8%BF%9B%E8%A1%8C%E8%B7%B3%E8%BD%AC%EF%BC%8C%E4%B8%80%E8%88%AC%E4%BA%BA%E4%B8%80%E7%9C%8B%E5%88%B0http://qq.com%E4%B9%8B%E7%B1%BB%E7%9A%84%E5%9F%9F%E5%90%8D%E8%AD%A6%E6%83%95%E6%80%A7%E4%BC%9A%E4%B8%8B%E9%99%8D%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%9B%B4%E5%AE%B9%E6%98%93%E4%B8%8A%E5%BD%93%E4%BA%86%E3%80%82">http://qq.com，http://baidu.com这样的域名下出现非持久型XSS，那么在发送钓鱼链接时就可以通过http://qq.com等域名进行跳转，一般人一看到http://qq.com之类的域名警惕性会下降，也就更容易上当了。</a></p>
+<p>很简单，试想下像<code>http://qq.com，http://baidu.com</code>这样的域名下出现非持久型XSS，那么在发送钓鱼链接时就可以通过<code>http://qq.com</code>等域名进行跳转，一般人一看到<code>http://qq.com</code>之类的域名警惕性会下降，也就更容易上当了。</p>
 <h4 id="防范措施"><a href="#防范措施" class="headerlink" title="防范措施"></a>防范措施</h4><ul>
 <li><p>HTML转义</p>
 <p>防范XSS攻击最主要的方法是对用户输入的内容进行HTML转义，转义后可以确保用户输入的内容在浏览器中作为文本显示，而不是作为代码解析。</p>
