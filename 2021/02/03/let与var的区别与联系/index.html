@@ -17,9 +17,25 @@
   <meta name="description" content="">
   <meta name="author" content="JXY">
   <meta name="keywords" content="">
-  <title>标签 - 静谧空间</title>
+  <title>let与var的区别与联系 - 静谧空间</title>
 
   <link  rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.5.3/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.1.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css" />
+  
 
 
 
@@ -47,7 +63,7 @@
 
 
 <body>
-  <header style="height: 80vh;">
+  <header style="height: 70vh;">
     <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand"
@@ -141,14 +157,51 @@
 </nav>
 
     <div class="banner intro-2" id="background" parallax=true
-         style="background: url('/img/wall.jpg') no-repeat center center;
+         style="background: url('/img/default.png') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="标签">
+            <span class="h2" id="subtitle" title="let与var的区别与联系">
               
             </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-02-03 20:37" pubdate>
+        2021年2月3日 晚上
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      206 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      2
+       分钟
+    </span>
+  
+
+  
+  
+</div>
 
             
           </div>
@@ -161,24 +214,108 @@
 
   <main>
     
-      <div class="container nopadding-md">
-        <div class="py-5" id="board"
-          >
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+      
 
-<div class="text-center tagcloud">
-  <a href="/tags/CSS/" style="font-size: 15px; color: #bbe">CSS</a> <a href="/tags/JavaScript/" style="font-size: 30px; color: #337ab7">JavaScript</a> <a href="/tags/hexo/" style="font-size: 22.5px; color: #779bd3">hexo</a> <a href="/tags/http/" style="font-size: 15px; color: #bbe">http</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 22.5px; color: #779bd3">博客</a> <a href="/tags/%E5%AE%89%E5%85%A8/" style="font-size: 15px; color: #bbe">安全</a> <a href="/tags/%E7%8A%B6%E6%80%81%E7%A0%81/" style="font-size: 15px; color: #bbe">状态码</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 15px; color: #bbe">网站</a> <a href="/tags/%E7%BD%91%E7%AB%99%E6%8E%A8%E8%8D%90/" style="font-size: 15px; color: #bbe">网站推荐</a>
-</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">let与var的区别与联系</h1>
+            
+            <div class="markdown-body">
+              <ul>
+<li><p>Let 与var 类似，但是，let生命的变量，只在其所在的代码块内有效。</p>
+</li>
+<li><p>let不会变量提升</p>
+</li>
+<li><p>let会造成暂时性死区，相当于在该代码块形成封锁</p>
+</li>
+<li><p>let不允许在<strong>相同作用域内</strong>重复声明</p>
+</li>
+<li><p>let的块级作用域</p>
+<p>var会造成循环变量泄漏为全局变量，如下，i本来是用来计数的，但居然可以访问了</p>
+<pre><code class="hljs javascript"><span class="hljs-keyword">var</span> s = <span class="hljs-string">&#x27;hello&#x27;</span>;
 
-              </div>
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; s.length; i++) &#123;
+  <span class="hljs-built_in">console</span>.log(s[i]);
+&#125;
+
+<span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">// 5</span></code></pre>
+
+<p>于是乎，let为js新增了块级作用域，而ES5 只有全局作用域和函数作用域（所以相应的var也只有这两种作用域）。</p>
+<p>所以，对于let而言，只要是大括号下，就会有作用域形成。</p>
+</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a target="_blank" rel="noopener" href="https://es6.ruanyifeng.com/#docs/let">https://es6.ruanyifeng.com/#docs/let</a>
+<a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>
             </div>
-          </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">前端基础知识</a>
+                    
+                  </div>
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/JavaScript/">JavaScript</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2020/12/19/XSS%E6%94%BB%E5%87%BB/">
+                        <span class="hidden-mobile">XSS攻击</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
         </div>
       </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
     
 
     
@@ -261,9 +398,15 @@
 
 
 
+  <script  src="https://cdn.staticfile.org/tocbot/4.12.0/tocbot.min.js" ></script>
 
 
 
+  <script  src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.staticfile.org/anchor-js/4.3.0/anchor.min.js" ></script>
 
 
 

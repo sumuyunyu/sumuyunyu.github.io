@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>let与var的区别与联系</title>
+    <link href="/2021/02/03/let%E4%B8%8Evar%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/"/>
+    <url>/2021/02/03/let%E4%B8%8Evar%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/</url>
+    
+    <content type="html"><![CDATA[<ul><li><p>Let 与var 类似，但是，let生命的变量，只在其所在的代码块内有效。</p></li><li><p>let不会变量提升</p></li><li><p>let会造成暂时性死区，相当于在该代码块形成封锁</p></li><li><p>let不允许在<strong>相同作用域内</strong>重复声明</p></li><li><p>let的块级作用域</p><p>var会造成循环变量泄漏为全局变量，如下，i本来是用来计数的，但居然可以访问了</p><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> s = <span class="hljs-string">&#x27;hello&#x27;</span>;<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; s.length; i++) &#123;  <span class="hljs-built_in">console</span>.log(s[i]);&#125;<span class="hljs-built_in">console</span>.log(i); <span class="hljs-comment">// 5</span></code></pre><p>于是乎，let为js新增了块级作用域，而ES5 只有全局作用域和函数作用域（所以相应的var也只有这两种作用域）。</p><p>所以，对于let而言，只要是大括号下，就会有作用域形成。</p></li></ul><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><section class="footnotes"><div class="footnote-list"><ol><li><span id="fn:1" class="footnote-text"><span><a href="https://es6.ruanyifeng.com/#docs/let">https://es6.ruanyifeng.com/#docs/let</a><a href="#fnref:1" rev="footnote" class="footnote-backref"> ↩</a></span></span></li></ol></div></section>]]></content>
+    
+    
+    <categories>
+      
+      <category>前端基础知识</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>JavaScript</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>XSS攻击</title>
     <link href="/2020/12/19/XSS%E6%94%BB%E5%87%BB/"/>
     <url>/2020/12/19/XSS%E6%94%BB%E5%87%BB/</url>
